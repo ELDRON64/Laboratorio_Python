@@ -3,7 +3,7 @@
         "giorno": 9,
         "mese": "giugno",
         "anno": 1934,
-        "età": 89,
+        "et\u00e0": 89,
         "sesso": "M",
         "mail": "paolino.paperin0@disney.org"
     },
@@ -11,7 +11,7 @@
         "giorno": 1,
         "mese": "marzo",
         "anno": 1980,
-        "età": 43,
+        "et\u00e0": 43,
         "sesso": "M",
         "mail": "ron_weasley80@hogwards.uk"
     },
@@ -19,7 +19,7 @@
         "giorno": 19,
         "mese": "ottobre",
         "anno": 2004,
-        "età": 19,
+        "et\u00e0": 19,
         "sesso": "F",
         "mail": "ramona.fls@gmail.com"
     },
@@ -27,7 +27,7 @@
         "giorno": 25,
         "mese": "maggio",
         "anno": 1969,
-        "età": 54,
+        "et\u00e0": 54,
         "sesso": "F",
         "mail": "madoka_sax@asahi_net.jp"
     }

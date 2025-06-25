@@ -1,5 +1,7 @@
 import json
 
+class RubricaError (BaseException):...
+
 class Rubrica:
     def __init__ ( self ):
         self._rubrica = None
@@ -12,7 +14,7 @@ class Rubrica:
         print ( '-'*(len(code)+26))
         print ( f"-- the error '{code}' occured --")
         print ( '-'*(len(code)+26))
-        assert condizione
+        raise RubricaError
     
     def APRI ( self, nome_file, is_json = True ):
         with open ( nome_file, 'r' ) as in_file:

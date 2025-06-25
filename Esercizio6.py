@@ -126,24 +126,43 @@ def Parse\
 rub = R.Rubrica( )
 com = ""
 while com != "EXIT":
-    com = input ( '\ncicciogamer@localhost % ' )
-    com = Parse ( com, [['-j'],['-j','bool',True]] )
-    match com['comm']:
-        case 'APRI':
-            rub.APRI ( com['arg1'], com['-j'] )
+	com = input ( 'cicciogamer@localhost % ' )
+	com = Parse ( com, [['-j'],['-j','bool',True]] )
+	try: 
+		match com['comm'].upper():
+			case 'APRI':
+				rub.APRI ( com['arg1'], com['-j'] )
 
-        case 'AGGIUNGI':
-            rub.AGGIUNGI ( [ com['arg'+str(i)] for i in range (1,8) ] )
+			case 'AGGIUNGI':
+				rub.AGGIUNGI ( [ com['arg'+str(i)] for i in range (1,8) ] )
 
-        case 'RIMUOVI':
-            rub.RIMUOVI ( com['arg1'] )
+			case 'RIMUOVI':
+				rub.RIMUOVI ( com['arg1'] )
 
-        case 'SALVA':
-            rub.SALVA ( com['arg1'], com['-j'] )
+			case 'SALVA':
+				rub.SALVA ( com['arg1'], com['-j'] )
 
-        case 'STAMPA':
-            rub.STAMPA ( com['arg1'] )
+			case 'STAMPA':
+				rub.STAMPA ( com['arg1'] )
+			
+			case 'HELP':
+				print ( """I Comandi disponibili sono:
+\tAPRI <file> <-j> apre il file e ne carica il contnuto se -j è specificato lo spre come json
+\tAGGIUNGI <giorno>, <mese>, <anno>, <età>, <sesso>, <mail> aggiunge il contatto descritto
+\tRIMUOVI <nome> rimove il contatto
+\tSALVA <file> <-j> salva la rubrica nel file ( che è conideator json se -j è presente )
+\tSTAMPA <nome> stampa il contatto
+\tEXIT provalo
+		""")
 
-        case 'EXIT':
-            print ( "hello i'm under the water plis help me\n" )
-            exit ( )
+			case 'EXIT':
+				print ( "hello i'm under the water plis help me\n" )
+				exit ( )
+	except IndexError:
+		print ( "sono stati forniti troppo pochi argomenti" )
+	except KeyError:
+		print ( "la persona cercata non esite" )
+	except TypeError:
+		print ( "missing parameters" )
+	except R.RubricaError:
+		pass # already printed
