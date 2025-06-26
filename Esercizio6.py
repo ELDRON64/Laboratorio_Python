@@ -1,4 +1,4 @@
-import Rubrica as R
+import Additional.Rubrica as R
 
 def is_int ( s ):
     if s[0] in ('-', '+'):

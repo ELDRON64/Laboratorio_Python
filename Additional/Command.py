@@ -1,4 +1,4 @@
-import Tartaruga
+import Additional.Tartaruga as Tartaruga
 
 def is_int ( s ):
     if s[0] in ('-', '+'):

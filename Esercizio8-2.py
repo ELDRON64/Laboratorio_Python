@@ -6,10 +6,10 @@ from colorama import Fore, Style
 def error ( message:str ):
 	print ( message )
 
-if not os.path.isfile ( "words" ):
+if not os.path.isfile ( "Additional/words" ):
 	error ( "no words?" )
 
-with open ( "words", 'r' ) as f:
+with open ( "Additional/words", 'r' ) as f:
 	# hope that it parse
 	# the only whay to chek for a non json input is to parse it
 	words = json.load ( f )
@@ -26,8 +26,12 @@ if words[letter] == []:
 word = random.choice ( words [ letter ] )
 
 guess = ''
-
+tentativi = 0
 while ( guess != word ):
+	tentativi += 1
+	if tentativi > 5:
+		print ( "enniente" )
+		exit ( )
 	# ask
 	guess = input ( "Inserire una parola di 5 lettere: " )
 	guess = guess.upper ( )

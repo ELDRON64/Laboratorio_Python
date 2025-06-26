@@ -7,7 +7,7 @@ def error ( message:str ):
 
 words = dict ( )
 try:
-	with open ( "words", 'r' ) as f:
+	with open ( "Additional/words", 'r' ) as f:
 		try:
 			words = json.load ( f )
 		except json.decoder.JSONDecodeError:
@@ -23,8 +23,12 @@ except IndexError:
 	error ( 'no words in list' )
 
 guess = ''
-
+tentativi = 0
 while ( guess != word ):
+	tentativi += 1
+	if tentativi > 5:
+		print ( "enniente" )
+		exit ( )
 	# ask
 	try: 
 		guess = input ( "Inserire una parola di 5 lettere: " )
@@ -51,23 +55,27 @@ while ( guess != word ):
 			if ( char == guess[index] ):
 				right.append ( index )
 		except IndexError:
-			error ( "Parola inserita è troppo corta" )
-			continue
+			# error ( "Parola inserita è troppo corta" )
+			# il messaggio diventa noioso dopo un po
+			pass
 		for c in range (0,5):
 			try:
 				if ( char == guess [c] and c != index ):
 					quasi.append ( c )
 			except IndexError:
-				error ( "Parola inserita è troppo corta" )
-				continue
+				# error ( "Parola inserita è troppo corta" )
+				pass
 	
 	for i in range (0,5):
-		if i in right:
-			print ( Fore.GREEN + guess[i], end='' )
-		elif i in quasi:
-			print ( Fore.YELLOW + guess[i], end='' )
-		else:
-			print ( Fore.WHITE + guess[i], end='' ) 
+		try:
+			if i in right:
+				print ( Fore.GREEN + guess[i], end='' )
+			elif i in quasi:
+				print ( Fore.YELLOW + guess[i], end='' )
+			else:
+				print ( Fore.WHITE + guess[i], end='' )
+		except IndexError:
+			break
 	
 	print ( Style.RESET_ALL)
 

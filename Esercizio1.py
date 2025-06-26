@@ -1,5 +1,5 @@
-import Tartaruga
-import Command
+import Additional.Tartaruga as Tartaruga
+import Additional.Command as Command
 
 def Punto3 ():
 	pippo = Command.Controller ( )
