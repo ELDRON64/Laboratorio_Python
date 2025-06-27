@@ -1,3 +1,15 @@
+#
+# Esercizio6.py
+#
+# Elia Castellarin
+#
+# 15 Maggio 2025
+# 
+# versione 1.0
+# 
+# Interfaccia con una classe rubrica
+#
+
 import Additional.Rubrica as R
 
 def is_int ( s ):

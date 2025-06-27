@@ -1,3 +1,15 @@
+#
+# Esercizio2.py
+#
+# Elia Castellarin
+#
+# 30 Aprile 2025
+# 
+# versione 1.0
+# 
+# Formatta il testo come richiesto e non richiede inputs
+#
+
 import re
 
 testo = '''

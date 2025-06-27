@@ -1,3 +1,15 @@
+#
+# Esercizio5.py
+#
+# Elia Castellarin
+#
+# 15 Maggio 2025
+# 
+# versione 1.0
+# 
+# Gioco delle n regine
+#
+
 from threading import Thread
 from threading import Lock
 import random

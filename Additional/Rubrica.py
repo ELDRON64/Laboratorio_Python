@@ -1,3 +1,15 @@
+#
+# Rubrica.py
+#
+# Elia Castellarin
+#
+# 13 Maggio 2025
+# 
+# versione 1.0
+# 
+# implementa la classe rubrica utilizzata nell esecizio 6
+#
+
 import json
 
 class RubricaError (BaseException):...

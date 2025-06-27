@@ -1,3 +1,15 @@
+#
+# Esercizio8-1.py
+#
+# Elia Castellarin
+#
+# 25 Giugno 2025
+# 
+# versione 1.1
+# 
+# wordle
+#
+
 import json
 import random
 from colorama import Fore, Style

@@ -1,3 +1,15 @@
+#
+# Esercizio8-2.py
+#
+# Elia Castellarin
+#
+# 25 Giugno 2025
+# 
+# versione 1.2
+# 
+# wordle
+#
+
 import os
 import json
 import random

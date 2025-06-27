@@ -1,3 +1,15 @@
+#
+# Command.py
+#
+# Elia Castellarin
+#
+# 23 Maggio 2025
+# 
+# versione 1.0
+# 
+# da un facile accesso alle funzioni della tartuaruga da linea di comando
+#
+
 import Additional.Tartaruga as Tartaruga
 
 def is_int ( s ):

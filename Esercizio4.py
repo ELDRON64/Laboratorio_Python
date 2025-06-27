@@ -1,3 +1,15 @@
+#
+# Esercizio4.py
+#
+# Elia Castellarin
+#
+# 30 Aprile 2025
+# 
+# versione 1.0
+# 
+# Stampa in un file la rubrica 
+#
+
 rubrica = {
 	'Paolino Paperino': {'giorno': 9, 'mese': 'giugno', 'anno': 1934, 'età': 89, 'sesso': 'M', 'mail': 'paolino.paperin0@disney.org'},
 	'Ron Weasley': {'giorno': 1, 'mese': 'marzo', 'anno': 1980, 'età': 43, 'sesso': 'M', 'mail': 'ron_weasley80@hogwards.uk'},

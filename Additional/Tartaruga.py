@@ -1,3 +1,15 @@
+#
+# Tartaruga.py
+#
+# Elia Castellarin
+#
+# 23 Maggio 2025
+# 
+# versione 1.0
+# 
+# implemneta la classe che gestisce la singola tarturuga e le forme
+#
+
 import turtle
 import numpy as np
 

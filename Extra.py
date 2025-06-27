@@ -1,4 +1,15 @@
-# Example file showing a circle moving on screen
+#
+# Extra.py
+#
+# Elia Castellarin
+#
+# 26 Giugno 2025
+# 
+# versione 1.0
+# 
+# palline che si muovo
+#
+
 import pygame
 
 # pygame setup
@@ -106,7 +117,7 @@ while not end:
 	
 	Window.fill ( "purple" )
 
-	dt = Timer.tick ( ) / 1000
+	dt = Timer.tick ( ) / 500
 	Update_Balls ( dt )
 
 	## render balls
@@ -119,11 +130,7 @@ while not end:
 		if ( part[1] < 0 ):
 			particles.remove ( part )
 
-
 	# switch the back render with front one
 	pygame.display.update()
 
-
-
 pygame.quit()
-

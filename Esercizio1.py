@@ -1,3 +1,15 @@
+#
+# Esercizio1.py
+#
+# Elia Castellarin
+#
+# 23 Maggio 2025
+# 
+# versione 2.0
+# 
+# Riceve come input il numero del punto descritto nella lezione 3 e lo esegue poi termina il programma
+#
+
 import Additional.Tartaruga as Tartaruga
 import Additional.Command as Command
 

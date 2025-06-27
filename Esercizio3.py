@@ -1,3 +1,15 @@
+#
+# Esercizio3.py
+#
+# Elia Castellarin
+#
+# 30 Aprile 2025
+# 
+# versione 1.0
+# 
+# Implemente l'esecizio 3 per maggiori informazioni eseguire il progrmma senza argomenti
+#
+
 rubrica = {
 	'Paolino Paperino': {'giorno': 9, 'mese': 'giugno', 'anno': 1934, 'età': 89, 'sesso': 'M', 'mail': 'paolino.paperin0@disney.org'},
 	'Ron Weasley': {'giorno': 1, 'mese': 'marzo', 'anno': 1980, 'età': 43, 'sesso': 'M', 'mail': 'ron_weasley80@hogwards.uk'},

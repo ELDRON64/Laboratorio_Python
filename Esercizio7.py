@@ -1,3 +1,15 @@
+#
+# Esercizio7.py
+#
+# Elia Castellarin
+#
+# 30 Aprile 2025
+# 
+# versione 1.0
+# 
+# Calcola e stampa l'integrale di 3 funzioni
+#
+
 import matplotlib.pyplot as plt
 import numpy as np
 
