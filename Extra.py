@@ -44,9 +44,24 @@ def Update_Balls ( dt ):
 
 	gravity = 98.1
 
+	center = [ Box[1]/2, Box[3]/2 ]
+	
+
 	for Ball in Balls:
+		
+		gravity_vector = [
+			- Ball[0] + center[0],
+			- Ball[1] + center[1]
+		]
+
+		gravity_vector_m = pow ( dot ( gravity_vector, gravity_vector ), 1/2 )
+
+		gravity_vector[0] /= gravity_vector_m
+		gravity_vector[1] /= gravity_vector_m
+
 		# apply gravity
-		Ball[2][1] += gravity * dt
+		Ball[2][0] += gravity * dt * gravity_vector[0]
+		Ball[2][1] += gravity * dt * gravity_vector[1]
 
 		Ball[0] += Ball[2][0] * dt
 		Ball[1] += Ball[2][1] * dt
